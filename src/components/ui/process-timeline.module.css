@@ -1,0 +1,230 @@
+.section {
+  position: relative;
+  min-height: 320svh;
+  padding: 0;
+  background: transparent;
+  isolation: isolate;
+}
+
+.stickyStage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 100svh;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.scene {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--header-height) + 5svh) 0 clamp(2.25rem, 5svh, 4rem);
+}
+
+.header {
+  text-align: center;
+  max-width: min(980px, 100%);
+  margin: 0 auto;
+  /* Match framer-motion initial: opacity 0.45, y 24 */
+  opacity: 0.45;
+  transform: translateY(24px);
+}
+
+.header h2 {
+  margin-bottom: 0.85rem;
+  color: #ffffff;
+  font-size: clamp(2.6rem, 6vw, 5.8rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.header p {
+  max-width: min(62ch, 100%);
+  margin: 0 auto;
+  font-size: clamp(1rem, 1.45vw, 1.28rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.track {
+  margin-top: clamp(2rem, 4.5svh, 3.2rem);
+}
+
+.pillWrap,
+.pillWrapBottom {
+  display: flex;
+  justify-content: center;
+  /* Match framer-motion initial: opacity ~0.3–0.4, y 18 */
+  opacity: 0.3;
+  transform: translateY(18px);
+}
+
+.pillWrap {
+  margin-bottom: clamp(0.9rem, 1.8svh, 1.25rem);
+}
+
+.pillWrapBottom {
+  margin: clamp(2.2rem, 5svh, 3.7rem) 0 clamp(0.9rem, 1.8svh, 1.25rem);
+}
+
+.pill,
+.pillAlt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(2.7rem, 4.4svh, 3.15rem);
+  min-width: min(24rem, 100%);
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8fbff;
+  font-size: clamp(0.9rem, 1.15vw, 1.06rem);
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 14px 28px rgba(2, 6, 16, 0.22);
+}
+
+.pillAlt {
+  background: rgba(69, 216, 239, 0.1);
+  border-color: rgba(69, 216, 239, 0.24);
+}
+
+.rail {
+  position: relative;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.railProgress {
+  position: absolute;
+  inset: 0;
+  transform-origin: 0% 50%;
+  background: linear-gradient(90deg, #ffffff 0%, #45d8ef 48%, #f27bb4 100%);
+  box-shadow: 0 0 24px rgba(69, 216, 239, 0.32);
+}
+
+.stepsGridTop,
+.stepsGridBottom {
+  display: grid;
+  gap: clamp(1rem, 1.8vw, 1.65rem);
+  margin-top: clamp(0.85rem, 1.8svh, 1.15rem);
+}
+
+.stepsGridTop {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stepsGridBottom {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.stepCard {
+  position: relative;
+  padding-top: clamp(1.05rem, 1.8svh, 1.3rem);
+  /* Match framer-motion initial: opacity 0.24, y 28, scale 0.97 */
+  opacity: 0.24;
+  transform: translateY(28px) scale(0.97);
+}
+
+.stepStem {
+  position: absolute;
+  top: calc(clamp(1.05rem, 1.8svh, 1.3rem) * -1);
+  left: 0.72rem;
+  width: 1px;
+  height: clamp(0.95rem, 1.8svh, 1.15rem);
+  background: linear-gradient(180deg, rgba(69, 216, 239, 0.92), rgba(69, 216, 239, 0));
+  transform-origin: top;
+}
+
+.stepDot {
+  display: block;
+  width: clamp(0.78rem, 1.1vw, 0.92rem);
+  height: clamp(0.78rem, 1.1vw, 0.92rem);
+  margin-bottom: clamp(0.8rem, 1.5svh, 1rem);
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(69, 216, 239, 0.72);
+}
+
+.stepCard h3 {
+  color: #ffffff;
+  font-size: clamp(1rem, 1.24vw, 1.42rem);
+  line-height: 1.16;
+  margin-bottom: 0.48rem;
+}
+
+.stepCard p {
+  max-width: 24ch;
+  font-size: clamp(0.84rem, 0.98vw, 1rem);
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+@media (max-width: 1120px) {
+  .section {
+    min-height: 290svh;
+  }
+
+  .stepsGridTop,
+  .stepsGridBottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 840px) {
+  .section {
+    min-height: auto;
+    padding: 5.5rem 0;
+  }
+
+  .stickyStage {
+    position: relative;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+    transform: none;
+    backface-visibility: visible;
+    will-change: auto;
+  }
+
+  .scene {
+    padding: 0;
+  }
+
+  .header h2 {
+    font-size: clamp(2.35rem, 10vw, 4rem);
+  }
+
+  .header p {
+    font-size: clamp(0.96rem, 3.8vw, 1.08rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .stepsGridTop,
+  .stepsGridBottom {
+    grid-template-columns: 1fr;
+  }
+
+  .pill,
+  .pillAlt {
+    min-width: 100%;
+  }
+
+  .pillWrapBottom {
+    margin-top: 2.25rem;
+  }
+
+  .stepCard p {
+    max-width: none;
+  }
+}

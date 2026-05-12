@@ -1,0 +1,262 @@
+import type { ShopifyProject } from "@/types";
+
+const projectImagePath = (fileName: string) =>
+  `/ProjectImage/${encodeURIComponent(fileName)}`;
+
+export const projectCategories = [
+  "All Works",
+  "Fashion & Lifestyle",
+  "Beauty & Wellness",
+  "Food & Beverage",
+  "Sports & Outdoor",
+  "Home Tech & Specialty",
+] as const;
+
+export const shopifyProjects: ShopifyProject[] = [
+  {
+    title: "Supps247",
+    category: "Sports & Outdoor",
+    href: "https://supps247.com.au",
+    imageSrc: projectImagePath("supps247.png"),
+  },
+  {
+    title: "TPH by Taraji",
+    category: "Beauty & Wellness",
+    href: "https://tphbytaraji.com",
+    imageSrc: projectImagePath("tphbytaraji.jpg"),
+  },
+  {
+    title: "Lwya",
+    category: "Beauty & Wellness",
+    href: "https://lwya.com",
+    imageSrc: projectImagePath("lwya.webp"),
+  },
+  {
+    title: "Plant Apothecary",
+    category: "Beauty & Wellness",
+    href: "https://plantapothecary.com",
+    imageSrc: projectImagePath("plantapotechary.webp"),
+  },
+  {
+    title: "Kptll",
+    category: "Food & Beverage",
+    href: "https://kptll.com",
+    imageSrc: projectImagePath("KPTLL.webp"),
+  },
+  {
+    title: "Minuman",
+    category: "Food & Beverage",
+    href: "https://minuman.com",
+    imageSrc: projectImagePath("minuman.webp"),
+  },
+  {
+    title: "Baltini",
+    category: "Fashion & Lifestyle",
+    href: "https://baltini.com",
+    imageSrc: projectImagePath("Baltini.jpg"),
+  },
+  {
+    title: "Diana Intimates",
+    category: "Fashion & Lifestyle",
+    href: "https://dianaintimates.com",
+    imageSrc: projectImagePath("dianaintimates.webp"),
+  },
+  {
+    title: "Cuptaste",
+    category: "Food & Beverage",
+    href: "https://cuptaste.net",
+    imageSrc: projectImagePath("cuptaste.avif"),
+  },
+  {
+    title: "Ria Miranda",
+    category: "Fashion & Lifestyle",
+    href: "https://riamiranda.com",
+    imageSrc: projectImagePath("riamiranda.webp"),
+  },
+  {
+    title: "Sallang Sallang",
+    category: "Fashion & Lifestyle",
+    href: "https://sallangsallang.com",
+    imageSrc: projectImagePath("sallangsallang.webp"),
+  },
+  {
+    title: "ATLM Korea Indonesia",
+    category: "Fashion & Lifestyle",
+    href: "https://id.atlm.kr",
+    imageSrc: projectImagePath("atelierdeLUMEN.jpg"),
+  },
+  {
+    title: "Monorrow",
+    category: "Fashion & Lifestyle",
+    href: "https://monorow.id",
+    imageSrc: projectImagePath("Monrow.webp"),
+  },
+  {
+    title: "Look Boutique Store",
+    category: "Fashion & Lifestyle",
+    href: "https://lookboutiquestore.com",
+    imageSrc: projectImagePath("LookboutiqueStore.jpeg"),
+  },
+  {
+    title: "Aquila Indonesia",
+    category: "Fashion & Lifestyle",
+    href: "https://aquilaindonesia.com",
+    imageSrc: projectImagePath("aquilaliving.jpg"),
+  },
+  {
+    title: "By Kami for Kamu",
+    category: "Fashion & Lifestyle",
+    href: "https://bykamirorkamu.com",
+    imageSrc: projectImagePath("bykamiforkamu2.webp"),
+  },
+  {
+    title: "Novere",
+    category: "Fashion & Lifestyle",
+    href: "https://novere.shop",
+    imageSrc: projectImagePath("novere.webp"),
+  },
+  {
+    title: "One Track Mind",
+    category: "Sports & Outdoor",
+    href: "https://onetrackmind.run",
+    imageSrc: projectImagePath("onetrackmind.avif"),
+  },
+  {
+    title: "Elmadina Abaya",
+    category: "Fashion & Lifestyle",
+    href: "https://elmadinaabaya.id",
+    imageSrc: projectImagePath("elmadina abaya.jpeg"),
+  },
+  {
+    title: "Suvski",
+    category: "Fashion & Lifestyle",
+    href: "https://suvski.com",
+    imageSrc: projectImagePath("suvski.jpg"),
+  },
+  {
+    title: "Domisilium",
+    category: "Home Tech & Specialty",
+    href: "https://domisilium.com",
+    imageSrc: projectImagePath("domisilium.webp"),
+  },
+  {
+    title: "Happy Little Sleeper",
+    category: "Home Tech & Specialty",
+    href: "https://happylittlesleeper.com",
+    imageSrc: projectImagePath("happylittlesleeper.png"),
+  },
+  {
+    title: "JDM Lures",
+    category: "Sports & Outdoor",
+    href: "https://jdmlures.com",
+    imageSrc: projectImagePath("jdmlures.jpg"),
+  },
+  {
+    title: "Samoondoh",
+    category: "Fashion & Lifestyle",
+    href: "https://samoondoh.co.id",
+    imageSrc: projectImagePath("samoondoh.jpg"),
+  },
+  {
+    title: "Annalee",
+    category: "Fashion & Lifestyle",
+    href: "https://annalee.co.id",
+    imageSrc: projectImagePath("annalee.webp"),
+  },
+  {
+    title: "Aukey Indonesia",
+    category: "Home Tech & Specialty",
+    href: "https://aukey.co.id",
+    imageSrc: projectImagePath("aukey.png"),
+  },
+  {
+    title: "Ice Baths",
+    category: "Sports & Outdoor",
+    href: "https://icebaths.com",
+    imageSrc: projectImagePath("IceBaths.jpg"),
+  },
+  {
+    title: "Abercrombie Indonesia",
+    category: "Fashion & Lifestyle",
+    href: "https://abercrombie.id",
+    imageSrc: projectImagePath("abercrobmie.webp"),
+  },
+  {
+    title: "Hollister Co Indonesia",
+    category: "Fashion & Lifestyle",
+    href: "https://hollisterco.id",
+    imageSrc: projectImagePath("hollister.avif"),
+  },
+  {
+    title: "Alo Yoga Indonesia",
+    category: "Sports & Outdoor",
+    href: "https://aloyoga.co.id",
+    imageSrc: projectImagePath("aloyoga.avif"),
+  },
+  {
+    title: "Huggooling",
+    category: "Home Tech & Specialty",
+    href: "https://huggooling.com",
+    imageSrc: projectImagePath("huggooling.png"),
+  },
+  {
+    title: "Bali Our Projects",
+    category: "Home Tech & Specialty",
+    href: "https://our-projects.com",
+    wordmark: "BALI OUR PROJECTS",
+  },
+  {
+    title: "Continue Life",
+    category: "Beauty & Wellness",
+    href: "https://continuelife.id",
+    wordmark: "CONTINUE LIFE",
+  },
+  {
+    title: "Uniland Sleep",
+    category: "Home Tech & Specialty",
+    href: "https://unilandsleep.id",
+    imageSrc: projectImagePath("UnilandSleep.webp"),
+  },
+  {
+    title: "Valencia by Enrica",
+    category: "Fashion & Lifestyle",
+    href: "https://valenciabyenrica.com",
+    imageSrc: projectImagePath("ValenciaByEnrica.jpg"),
+  },
+  {
+    title: "Friend of Sally",
+    category: "Fashion & Lifestyle",
+    href: "https://friendofsally.com",
+    imageSrc: projectImagePath("FriendOfSally.webp"),
+  },
+  {
+    title: "Erigo",
+    category: "Fashion & Lifestyle",
+    href: "https://erigostore.co.id",
+    imageSrc: projectImagePath("Erigo.jpg"),
+  },
+  {
+    title: "Dagadu",
+    category: "Fashion & Lifestyle",
+    href: "https://dagadu.co.id",
+    imageSrc: projectImagePath("Dagadu.jpg"),
+  },
+  {
+    title: "Mooi Hearthmade",
+    category: "Home Tech & Specialty",
+    href: "https://mooihearthmade.com",
+    imageSrc: projectImagePath("MOOI.jpg"),
+  },
+  {
+    title: "Auscycle Works",
+    category: "Sports & Outdoor",
+    href: "https://auscycles.com",
+    imageSrc: projectImagePath("auscycles.webp"),
+  },
+  {
+    title: "MKP Bikes",
+    category: "Sports & Outdoor",
+    href: "https://mkpbikes.com.au",
+    imageSrc: projectImagePath("MKPBikes.jpg"),
+  },
+];
