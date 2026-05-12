@@ -34,5 +34,13 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "prisma/**/*",
+    "prisma/seed.ts",
+    "prisma.config.ts",
+    "src/lib/prisma.ts",
+    "src/lib/actions/**/*.ts",
+    "src/generated/prisma/**/*"
+  ]
 }

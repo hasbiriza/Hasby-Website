@@ -291,3 +291,19 @@ test("development process shows all content on mobile without clipping", () => {
   assert.match(styles, /@media \(max-width: 840px\)[\s\S]*\.stickyStage\s*{[\s\S]*transform: none/s);
   assert.match(styles, /@media \(max-width: 840px\)[\s\S]*\.stickyStage\s*{[\s\S]*will-change: auto/s);
 });
+
+test("deployment typecheck excludes local-only prisma files", () => {
+  const tsconfig = JSON.parse(readProjectFile("tsconfig.json"));
+  const excluded = tsconfig.exclude ?? [];
+
+  for (const pattern of [
+    "prisma/**/*",
+    "prisma/seed.ts",
+    "prisma.config.ts",
+    "src/lib/prisma.ts",
+    "src/lib/actions/**/*.ts",
+    "src/generated/prisma/**/*",
+  ]) {
+    assert.ok(excluded.includes(pattern), `expected tsconfig to exclude ${pattern}`);
+  }
+});
